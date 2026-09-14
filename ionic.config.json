@@ -1,0 +1,7 @@
+{
+  "name": "pgpblionic26",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
