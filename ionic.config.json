@@ -1,7 +1,14 @@
 {
   "name": "pgpblionic26",
+<<<<<<< HEAD
   "integrations": {
     "capacitor": {}
   },
   "type": "angular"
 }
+=======
+  "integrations": {},
+  "type": "angular",
+  "id": "d5111320"
+}
+>>>>>>> 2cc4b3b81ce8d1a0a4fd173f501ac3a6a8409763
