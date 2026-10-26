@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 
 import { ref, push, onValue, remove, get, update } from
@@ -39,6 +40,33 @@ export class DataService {
 
     });
 
+  }
+
+  deletePoint(key: string) {
+    const pointRef = ref(database, `points/${key}`);
+    return remove(pointRef);
+  }
+
+  getPoint(key: string) {
+    const pointRef = ref(database, `points/${key}`);
+
+    return new Promise((resolve, reject) => {
+      get(pointRef).then((snapshot) => {
+        const data = snapshot.val();
+        resolve(data);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  }
+
+  updatePoint(key: string, point: {
+    name: string,
+    coordinates: string,
+    description: string
+  }) {
+    const pointRef = ref(database, `points/${key}`);
+    return update(pointRef, point);
   }
 
 }
